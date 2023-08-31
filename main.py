@@ -14,7 +14,7 @@ app = Flask(__name__)
 
 
 
-import mysql.connector
+'''import mysql.connector
 
 mydb=mysql.connector.connect(
     host="localhost",
@@ -33,7 +33,7 @@ sqlformula="INSERT INTO USER (email,name,password) VALUES (%s,%s,%s)"
 mydb.commit()
 
 
-
+'''
 
 
 
@@ -81,8 +81,8 @@ def register():
         new_user = User(email=form.Email.data, name=form.Name.data, password=hash_and_salted_password)
 
         datasql=(form.Email.data,form.Name.data,hash_and_salted_password)
-        mycur.execute(sqlformula,datasql)
-        mydb.commit()
+       #mycur.execute(sqlformula,datasql)
+        #mydb.commit()
 
         db.session.add(new_user)
         db.session.commit()
@@ -123,4 +123,4 @@ def contact():
     return render_template("contact.html")
 
 if __name__ == "__main__":
-    app.run(port=5500, debug=True)
+    app.run(host='0.0.0.0',port=5500, debug=True)
