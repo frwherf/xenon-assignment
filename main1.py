@@ -10,7 +10,7 @@ from forms import CreatePostForm, RegisterForm, Login
 
 app = Flask(__name__)
 
-#hello world
+
 
 '''import mysql.connector
 
