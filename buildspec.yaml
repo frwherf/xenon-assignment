@@ -1,0 +1,5 @@
+version: 0.1
+phases:
+  build:
+    commands:
+      - mvn verify sonar:sonar -Dsonar.projectKey=demo5759_demo5759 -Dsonar.organization=demo5759 -Dsonar.host.url=https://sonarcloud.io -Dsonar.login=65349660753fcfb61662bf67898d449a8ec852a0 
